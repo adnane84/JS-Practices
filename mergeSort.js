@@ -26,8 +26,10 @@ function merge(left, right) {
     }
   }
 
-  return result.concat(left, right);
+  return result.concat(left, right); // or we can do [...result, ...left, ...right]
 }
 
 // Example usage:
 mergeSort([3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5]); // [1, 1, 2, 3, 3, 4, 5, 5, 5, 6, 9]
+
+// the time complexity for this approach will be Big-O = O(nlogn)

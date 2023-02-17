@@ -39,7 +39,7 @@ function insertionSort(array) {
   }
 }
 
-const arr = [8, 20, -2, 4, -6];
+const arr = [28, 20, -2, 4, -6];
 insertionSort(arr);
 console.log(arr);
 
