@@ -24,3 +24,23 @@ function insertionSort(arr) {
 
 // Example usage:
 insertionSort([3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5]); // [1, 1, 2, 3, 3, 4, 5, 5, 5, 6, 9]
+
+//different way to approach the insertion without recursion.
+
+function insertionSort(array) {
+  for (let i = 1; i < array.length; i++) {
+    let numberToInsert = array[i];
+    let j = i - 1;
+    while (j >= 0 && array[j] > numberToInsert) {
+      array[j + 1] = array[j];
+      j = j - 1;
+    }
+    array[j + 1] = numberToInsert;
+  }
+}
+
+const arr = [8, 20, -2, 4, -6];
+insertionSort(arr);
+console.log(arr);
+
+//The time complexity for this approach is Big-O = (n^2)

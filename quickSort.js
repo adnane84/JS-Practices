@@ -55,3 +55,25 @@ function divideAndMergeSort(arr) {
 
 // Example usage:
 console.log(divideAndMergeSort([3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5])); // [1, 1, 2, 3, 3, 4, 5, 5, 5, 6, 9]
+
+//different way to approach it, but now our Pivot will be the last index of our array.
+
+function quickSort(array) {
+  if (array.length < 2) {
+    return array;
+  }
+  let pivot = array[array.length - 1];
+  let left = [];
+  let right = [];
+  for (let i = 0; i < array.length - 1; i++) {
+    if (array[i] < pivot) {
+      left.push(array[i]);
+    } else {
+      right.push(array[i]);
+    }
+  }
+  return [...quickSort(left), pivot, ...quickSort(right)];
+}
+
+// Worst case will be Big-O = O(n^2)
+// Avg case is O(nlogn) because we got 2 arrays = O(logn) plus a loop.
