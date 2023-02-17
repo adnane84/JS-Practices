@@ -8,6 +8,7 @@ function isPrime(n) {
     return false;
   }
   for (let i = 2; i < n; i++) {
+    // or we can do i <= Math.sqrt(n)
     if (n % i === 0) {
       return false;
     }
@@ -16,3 +17,4 @@ function isPrime(n) {
 }
 
 //the Big O for this is O(n) because we are looping once.
+// in the second case the Big-O = O(sqrt(n))
