@@ -37,5 +37,4 @@ function binarySearch(array, t) {
 //  is to know where our target could be located,
 //  and then we shrink our array to make it easy to find our target.
 
-
 // The big will be O(logn)
